@@ -155,6 +155,10 @@
       .gravity(0)
       .size([width, height]);
 
+      //came from sticky force example
+      var drag = force.drag()
+         .on("dragstart", dragstart);
+
       var svg = d3.select("body").append("svg")
       .attr("width", width)
       .attr("height", height);
@@ -184,7 +188,10 @@
        .data(graph.nodes)
        .enter()
        .append('g')
-       .classed('gnode', true);
+       .classed('gnode', true)
+        //comes from sticky nodes example  
+       .on("dblclick", dblclick)
+       .call(drag);
 
       var node = gnodes.append("circle")
         .attr("class", "node")
@@ -221,6 +228,14 @@
       };
 
       drawGraph(graph);
+      //below comes from sticky node example
+      function dblclick(d) {
+        d3.select(this).classed("fixed", d.fixed = false);
+      }
+
+      function dragstart(d) {
+        d3.select(this).classed("fixed", d.fixed = true);
+      }
     </script>
   </body>
 </html>
