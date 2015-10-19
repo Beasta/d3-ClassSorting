@@ -1,0 +1,23 @@
+{
+  "name": "d3-ClassSorting",
+  "authors": [
+    "Barry Blaha <barryblaha@gmail.com>"
+  ],
+  "description": "Sort a class into groups using a survey to find affinities and refusals",
+  "main": "Sorting.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.5.6"
+  }
+}
