@@ -10,3 +10,5 @@ Open the Sorting.html file
 Hovering over nodes will show student's name
 Clicking and dragging a node will make it stick.
 Double Clicking will release that node
+
+Green Links are affinities
